@@ -7,6 +7,7 @@ ${browser} =  chrome
 
 *** Test Cases ***
 Should be able to verify something
+
   [Documentation]  This is just to verify
   [Tags]  smoke  regression
   open browser  https://www.google.com  ${browser}
@@ -17,10 +18,9 @@ Should be able to verify something
   close browser
   set log level  info
 
-
 01__AShould be able to verify everything
   [Documentation]  This is just to verify
-  [Tags]  regression
+  [Tags]  regression smoke  newTag
   open browser  https://www.wikipedia.com  ${browser}
   input text  id=searchInput  robot framework
   click button  xpath=//button[@class='pure-button pure-button-primary-progressive']
@@ -29,4 +29,5 @@ Should be able to verify something
   log  ${LOG_FILE}
   log  ${report_file}
   log  @{TEST_TAGS}
+  log  ${SUITE_DOCUMENTATION}
   log  ${SUITE_DOCUMENTATION}
