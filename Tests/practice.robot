@@ -38,7 +38,4 @@ write to excel file
   set test variable  ${test_variable}  Limited to test
   set suite variable  ${suite_variable}  Limited to suite
   set global variable  ${global_variable}  limited to all - global
-  run keyword and continue on failure
-  create list
-
 
