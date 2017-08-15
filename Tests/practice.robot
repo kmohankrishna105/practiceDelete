@@ -1,5 +1,6 @@
 *** Settings ***
 Library  Selenium2Library
+library  robot
 
 *** Variables ***
 ${browser} =  chrome
@@ -30,3 +31,14 @@ Should be able to verify something
   log  ${report_file}
   log  @{TEST_TAGS}
   log  ${SUITE_DOCUMENTATION}
+
+write to excel file
+  [Tags]  smoke
+  [Documentation]  writing to an excel file
+  set test variable  ${test_variable}  Limited to test
+  set suite variable  ${suite_variable}  Limited to suite
+  set global variable  ${global_variable}  limited to all - global
+  run keyword and continue on failure
+  create list
+
+
